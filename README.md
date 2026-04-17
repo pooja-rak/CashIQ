@@ -4,7 +4,7 @@
 
 **CashIQ** is a smart location-based application that helps users find nearby ATMs and provides real-time insights such as ATM condition, cash availability, and crowd level.
 
-The goal of this project is to reduce user inconvenience by helping them choose the most suitable ATM based on live conditions and navigate to it بسهولة.
+The goal of this project is to reduce user inconvenience by helping them choose the most suitable ATM 
 
 ---
 
@@ -23,7 +23,7 @@ The goal of this project is to reduce user inconvenience by helping them choose 
 
 * **Python**
 * **Streamlit**
-* **Google Maps API**
+* **Openstreet Maps API**
 * **Geolocation Services**
 * **Pandas / NumPy**
 
