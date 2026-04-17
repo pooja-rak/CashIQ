@@ -11,10 +11,10 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 os.makedirs("models", exist_ok=True)
 
 
-atm_master = pd.read_csv("data/atm_master_data.csv")
-crowd_df = pd.read_csv("data/atm_crowd_data.csv")
-cash_df = pd.read_csv("data/atm_cash_data.csv")
-condition_df = pd.read_csv("data/atm_condition_data.csv")
+atm_master = pd.read_csv("atm_master_data.csv")
+crowd_df = pd.read_csv("atm_crowd_data.csv")
+cash_df = pd.read_csv("atm_cash_data.csv")
+condition_df = pd.read_csv("atm_condition_data.csv")
 
 
 le_atm = LabelEncoder()
@@ -157,18 +157,18 @@ print(confusion_matrix(y_test, y_pred))
 print(classification_report(y_test, y_pred, target_names=le_condition.classes_))
 condition_accuracy = accuracy_score(y_test, y_pred)
 
-pickle.dump(crowd_model, open("models/crowd_model.pkl", "wb"))
-pickle.dump(cash_model, open("models/cash_model.pkl", "wb"))
-pickle.dump(condition_model, open("models/condition_model.pkl", "wb"))
+pickle.dump(crowd_model, open("crowd_model.pkl", "wb"))
+pickle.dump(cash_model, open("cash_model.pkl", "wb"))
+pickle.dump(condition_model, open("condition_model.pkl", "wb"))
 
-pickle.dump(le_atm, open("models/le_atm.pkl", "wb"))
-pickle.dump(le_crowd, open("models/le_crowd.pkl", "wb"))
-pickle.dump(le_cash, open("models/le_cash.pkl", "wb"))
-pickle.dump(le_condition, open("models/le_condition.pkl", "wb"))
-pickle.dump(le_time, open("models/le_time.pkl", "wb"))
-pickle.dump(le_day, open("models/le_day.pkl", "wb"))
+pickle.dump(le_atm, open("le_atm.pkl", "wb"))
+pickle.dump(le_crowd, open("le_crowd.pkl", "wb"))
+pickle.dump(le_cash, open("le_cash.pkl", "wb"))
+pickle.dump(le_condition, open("le_condition.pkl", "wb"))
+pickle.dump(le_time, open("le_time.pkl", "wb"))
+pickle.dump(le_day, open("le_day.pkl", "wb"))
 
-print("\n✅ ALL MODELS TRAINED AND SAVED SUCCESSFULLY")
+print("\n ALL MODELS TRAINED AND SAVED SUCCESSFULLY")
 
 
 models = ["Crowd Model", "Cash Model", "Condition Model"]
