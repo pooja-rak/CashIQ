@@ -18,7 +18,7 @@ import openrouteservice
 def get_ors_client():
     ORS_API_KEY = st.secrets.get("ORS_API_KEY", "demo")
     if ORS_API_KEY == "demo":
-        st.warning("⚠️ Add ORS_API_KEY to .streamlit/secrets.toml")
+        st.warning("⚠️ Add ORS_API_KEY to secrets.toml")
         return None
     return openrouteservice.Client(key=ORS_API_KEY)
 
@@ -80,16 +80,16 @@ section[data-testid="stSidebar"] * {
 # 🔥 LOAD MODELS FIRST
 @st.cache_data
 def load_models():
-    atm_locations = pd.read_csv("data/atm_master_data.csv")
-    crowd_model = pickle.load(open("models/crowd_model.pkl", "rb"))
-    cash_model = pickle.load(open("models/cash_model.pkl", "rb"))
-    condition_model = pickle.load(open("models/condition_model.pkl", "rb"))
-    le_atm = pickle.load(open("models/le_atm.pkl", "rb"))
-    le_crowd = pickle.load(open("models/le_crowd.pkl", "rb"))
-    le_cash = pickle.load(open("models/le_cash.pkl", "rb"))
-    le_condition = pickle.load(open("models/le_condition.pkl", "rb"))
-    le_time = pickle.load(open("models/le_time.pkl", "rb"))
-    le_day = pickle.load(open("models/le_day.pkl", "rb"))
+    atm_locations = pd.read_csv("atm_master_data.csv")
+    crowd_model = pickle.load(open("crowd_model.pkl", "rb"))
+    cash_model = pickle.load(open("cash_model.pkl", "rb"))
+    condition_model = pickle.load(open("condition_model.pkl", "rb"))
+    le_atm = pickle.load(open("le_atm.pkl", "rb"))
+    le_crowd = pickle.load(open("le_crowd.pkl", "rb"))
+    le_cash = pickle.load(open("le_cash.pkl", "rb"))
+    le_condition = pickle.load(open("le_condition.pkl", "rb"))
+    le_time = pickle.load(open("le_time.pkl", "rb"))
+    le_day = pickle.load(open("le_day.pkl", "rb"))
     return (atm_locations, crowd_model, cash_model, condition_model, le_atm, le_crowd, le_cash, le_condition, le_time, le_day)
 
 
