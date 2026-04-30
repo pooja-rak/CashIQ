@@ -1,6 +1,6 @@
-# 💳 CashIQ – Smart ATM Locator & Analyzer
+# CashIQ – Smart ATM Locator & Analyzer
 
-## 📌 Overview
+## Overview
 
 **CashIQ** is a smart location-based application that helps users find nearby ATMs and provides real-time insights such as ATM condition, cash availability, and crowd level.
 
